@@ -21,3 +21,14 @@ Esta é uma API REST robusta desenvolvida com **Spring Boot** para gerenciar age
 * **Bloqueio de Agenda:** Funcionalidade para o administrador bloquear horários específicos para compromissos ou manutenção.
 * **Cálculo de Faturamento:** Relatórios financeiros automáticos por período, dia e total.
 
+* ##  Endpoints da API
+
+| Método | Endpoint | Descrição | Acesso |
+| :--- | :--- | :--- | :--- |
+| **POST** | `/api/login` | Realiza login e retorna o Token JWT | Público |
+| **POST** | `/api/usuarios/registrar` | Cadastro de novos clientes | Público |
+| **GET** | `/api/servicos` | Lista todos os serviços ativos | Público |
+| **POST** | `/api/agendamentos` | Cria um novo agendamento | Autenticado |
+| **GET** | `/api/agendamentos/faturamento` | Consulta faturamento (Total/Hoje/Período) | Admin |
+| **DELETE** | `/api/agendamentos/{id}` | Cancela um agendamento | Admin / Dono |
+
