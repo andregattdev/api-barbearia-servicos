@@ -15,7 +15,7 @@ public class DataInitializer implements CommandLineRunner {
     private UsuarioRepository usuarioRepository;
 
     @Autowired
-    private PasswordEncoder passwordEncoder; // Vamos configurar isso no passo 3
+    private PasswordEncoder passwordEncoder; 
 
     @Override
     public void run(String... args) throws Exception {
