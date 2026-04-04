@@ -1,19 +1,18 @@
 package com.app.api_servicos.controller;
 
 import com.app.api_servicos.model.Agendamento;
-<<<<<<< HEAD
+
 import com.app.api_servicos.model.Usuario;
-=======
->>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
+
 import com.app.api_servicos.service.AgendamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-<<<<<<< HEAD
+
 import org.springframework.security.core.context.SecurityContextHolder;
-=======
->>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
+
+
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -77,7 +76,7 @@ public class AgendamentoController {
         return agendamentoService.obterFaturamentoTotal();
     }
 
-<<<<<<< HEAD
+
     @GetMapping("/meus")
     public ResponseEntity<List<Agendamento>> listarMeusAgendamentos() {
         // Recupera o usuário logado do contexto de segurança
@@ -92,6 +91,6 @@ public class AgendamentoController {
     }
 
 
-=======
->>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
+
+
 }
