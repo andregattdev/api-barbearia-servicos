@@ -30,9 +30,12 @@ public class Cliente {
     private LocalDate dataCadastro = LocalDate.now();
 
     private boolean ativo = true; // Para desativar clientes sem excluir do banco de dados
+<<<<<<< HEAD
 
     @OneToOne
     @JoinColumn(name = "usuario_id", unique = true)
     private Usuario usuario;
 
+=======
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
 }

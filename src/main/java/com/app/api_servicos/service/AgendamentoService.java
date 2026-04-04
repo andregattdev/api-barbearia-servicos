@@ -8,7 +8,10 @@ import com.app.api_servicos.repository.AgendamentoRepository;
 import com.app.api_servicos.repository.ClienteRepository;
 import com.app.api_servicos.repository.ServicoRepository;
 
+<<<<<<< HEAD
 import com.app.api_servicos.repository.UsuarioRepository;
+=======
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
 import jakarta.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +34,12 @@ public class AgendamentoService {
     @Autowired
     private ClienteRepository clienteRepository;
 
+<<<<<<< HEAD
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+=======
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
     public List<Agendamento> listarAtivos() {
         return agendamentoRepository.findByAtivoTrue();
     }
@@ -47,12 +53,17 @@ public class AgendamentoService {
         Servico servico = servicoRepository.findById(agendamento.getServico().getId())
                 .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
 
+<<<<<<< HEAD
         // 3. Vincula cliente ao usuário logado
         Cliente cliente = clienteRepository.findByUsuario(usuarioLogado)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
 
         agendamento.setCliente(cliente);
         agendamento.setUsuario(usuarioLogado);
+=======
+        // 3. Define os dados automáticos
+        agendamento.setUsuario(usuarioLogado); // O dono do agendamento é o cara do Token!
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
         agendamento.setServico(servico);
         agendamento.setAtivo(true);
         agendamento.setStatus("CONFIRMADO");
@@ -74,8 +85,11 @@ public class AgendamentoService {
         return agendamentoRepository.save(agendamento);
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
     public void desativar(Long id) {
         Agendamento agendamento = agendamentoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Agendamento não encontrado"));
@@ -148,9 +162,12 @@ public class AgendamentoService {
         agendamentoRepository.save(bloqueio);
     }
 
+<<<<<<< HEAD
     public List<Agendamento> listarPorUsuario(Usuario usuario) {
         return agendamentoRepository.findByUsuarioAndAtivoTrue(usuario);
     }
 
 
+=======
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
 }

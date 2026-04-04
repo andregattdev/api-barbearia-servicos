@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 # VS Code
 .vscode/
 
 # IntelliJ IDEA
 .idea/
 *.iml
+=======
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+/bin/
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+.env
+>>>>>>> 36d150d0b02a6471b12188008fd8062c1d1d37bc
