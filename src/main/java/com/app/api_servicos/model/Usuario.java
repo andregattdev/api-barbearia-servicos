@@ -1,5 +1,6 @@
 package com.app.api_servicos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,6 +16,7 @@ public class Usuario {
     @Column(unique = true, nullable = false)
     private String login;
 
+    @JsonIgnore
     @Column(nullable = false)
     private String senha;
 

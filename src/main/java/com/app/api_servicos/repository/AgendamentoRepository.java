@@ -15,6 +15,8 @@ public interface AgendamentoRepository extends JpaRepository<Agendamento, Long> 
 
         List<Agendamento> findByAtivoTrue();
 
+        List<Agendamento> findByUsuario(Usuario usuario);
+
 
         List<Agendamento> findByUsuarioAndAtivoTrue(Usuario usuario);
 
